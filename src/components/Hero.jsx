@@ -19,7 +19,7 @@ const Hero = () => {
     if (!mount) {
         return null
     }
- 
+
 
     return (
         <div className=' w-auto cursor-pointer pl-2 mt-14 leading-none '>
@@ -28,7 +28,7 @@ const Hero = () => {
                     <p className=' text-cyan-500 font-bold text-2xl md:text-4xl lg:text-5xl'>
                         Reshape
                     </p>
-                    <p className=' text-slate-500 text-2xl font-semibold md:text-4xl lg:text-5xl '>Your Lifestyle <br />
+                    <p className=' text-slate-500 text-2xl font-bold md:text-4xl lg:text-5xl '>Your Lifestyle <br />
                         with <span className='text-cyan-500 font-bold text-2xl md:text-4xl lg:text-5xl'>Discipline</span>
                     </p>
                 </div>
@@ -41,14 +41,23 @@ const Hero = () => {
             <div className='mt-16 md:ml-7 '>
                 <p className='text-slate-500 text-2xl font-medium lg:text-3xl'>Design Your Working <span className=" text-cyan-500  rounded font-semibold">Schedule</span> with us :
                 </p>
-                <div className='mt-2'>
-                    <Link href='/Signup'>
-                        <button className='text-white bg-cyan-500 py-3 px-2 rounded-md  '>Create Your Account</button>
-                    </Link>
+                <div className='flex gap-2'>
+                    <div className='mt-2'>
+                        <Link href='/Signup'>
+                            <button className='text-white bg-cyan-500 py-3 px-2 rounded-md  '>Create Your Account</button>
+                        </Link>
 
+                    </div>
+                    <div className='mt-2'>
+                        <Link href='/Login'>
+                            <button className='text-white bg-cyan-500 py-3 px-7 rounded-md   '>Login</button>
+                        </Link>
+
+                    </div>
                 </div>
+
             </div>
-           
+
         </div>
     )
 }
