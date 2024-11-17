@@ -7,12 +7,13 @@ import FormModal from '@/components/FormModal';
 import ladytodo from '@/assest/images/ladytodo.jpg';
 import Image from 'next/image';
 import { supabase } from '@/client';
+import Swal from "sweetalert2";
 import Preloader from '@/components/Preloader/Preloader';
 
-// ClientOnlyComponent will handle search params and client-side logic.
-const ClientOnlyComponent = ({category, setCategory}) => {
+
+const ClientOnlyComponent = ({ category, setCategory }) => {
     const params = useSearchParams();
-    const value = params.get('value'); // Get the query parameter value
+    const value = params.get('value'); 
 
     useEffect(() => {
         if (value) {
@@ -36,7 +37,7 @@ const DetailPage = () => {
     const [taskAdded, setAddedTask] = useState(false);
     const [category, setCategory] = useState('');
 
-    // Function to fetch data from supabase based on the category.
+   
     const getData = async () => {
         if (!category) return;
 
@@ -55,19 +56,13 @@ const DetailPage = () => {
     };
 
 
-    useEffect(()=>{
-        console.log("hhhh");
-        
-    })
 
-    useEffect (() => {
+    useEffect(() => {
         if (category) {
             getData();
-            console.log("ffff");
-            
             setAddedTask(false);
         }
-    },[category] );
+    }, [category]);
 
     const deleted = async (id) => {
         console.log(id);
@@ -81,7 +76,7 @@ const DetailPage = () => {
                 throw error;
             }
 
-            alert('Task deleted successfully!');
+            Swal.fire("Task Deleted successfully");
             getData();
         } catch (error) {
             console.error('Error deleting task:', error.message);
@@ -97,7 +92,7 @@ const DetailPage = () => {
                     <div className='flex justify-start items-center mt-16'>
                         <Image src={ladytodo} alt='ladyImg' className='w-28' />
                         <Suspense fallback={<Preloader />}>
-                            <ClientOnlyComponent category={category} setCategory={setCategory}/>
+                            <ClientOnlyComponent category={category} setCategory={setCategory} />
                         </Suspense>
                     </div>
 

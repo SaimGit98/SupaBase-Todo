@@ -51,7 +51,7 @@ const Page = () => {
                     console.log("Sign-up successful:", data);
                     localStorage.setItem("token", data.session.access_token)
                     Swal.fire("You're Welcome!");
-                    // router.push("/Dashboard"); 
+                    router.push("/Dashboard"); 
                 }
             })
             .catch((error) => {
@@ -122,7 +122,7 @@ const Page = () => {
                     </Link>
                 </div>
 
-                <div className=" mt-8 flex justify-center   ">
+                <div className=" mt-8 flex justify-center">
                     <p className="text-sm md:text-base "> Get the app .</p>
                 </div>
 
