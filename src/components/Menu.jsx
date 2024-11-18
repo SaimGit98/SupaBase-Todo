@@ -53,6 +53,7 @@ export default function LongMenu() {
             },
           },
         }}
+        className='text-white md:text-blue-800' 
       >
         {options.map((option) => (
           <MenuItem key={option}  onClick={handleClose}>

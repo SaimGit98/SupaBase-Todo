@@ -84,7 +84,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="w-full h-screen mt-0 mr-0 mb-10 ml-0 pt-10 pr-0">
+    <div className="w-full h-full mt-4 mr-0 mb-10 ml-0 pt-10 pr-0 md:mt-0">
       <div className=" h-auto md:border-2 md:w-80 md:h-auto md:m-auto md:py-6 lg:items-end">
         <div className=" w-full h-14 flex justify-center ">
           <Image src={profile} alt="logo" className="w-14" />

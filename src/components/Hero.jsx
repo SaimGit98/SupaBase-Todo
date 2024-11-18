@@ -22,35 +22,35 @@ const Hero = () => {
 
 
     return (
-        <div className=' w-auto cursor-pointer pl-2 mt-14 leading-none '>
-            <div className='flex items-center justify-center w-full mt-5 m-auto '>
-                <div className=' w-1/3 md:w-2/3 md:ml-7 lg:ml-10'>
-                    <p className=' text-cyan-500 font-bold text-2xl md:text-4xl lg:text-5xl'>
+        <div className=' w-auto h-full cursor-pointer pl-2 mt-14 leading-none '>
+            <div className=' w-full mt-5 md:flex md:items-center m-auto '>
+                <div className=' w-auto pl-5 md:w-2/3 md:ml-7 lg:ml-10'>
+                    <p className=' text-cyan-500 font-bold text-4xl md:text-5xl lg:text-6xl'>
                         Reshape
                     </p>
-                    <p className=' text-slate-500 text-2xl font-bold md:text-4xl lg:text-5xl '>Your Lifestyle <br />
-                        with <span className='text-cyan-500 font-bold text-2xl md:text-4xl lg:text-5xl'>Discipline</span>
+                    <p className=' text-slate-500 text-4xl font-bold md:text-5xl lg:text-6xl '>Your Lifestyle <br />
+                        with <span className='text-cyan-500 font-bold text-4xl md:text-5xl lg:text-6xl'>Discipline</span>
                     </p>
                 </div>
-                <div className='w-auto object-cover cursor-pointer'>
+                <div className='w-auto mt-8 object-cover cursor-pointer'>
                     <Image src={svg} className='w-full md:w-96  lg:w-96 lg:h-auto' alt='svg' />
                 </div>
 
             </div>
 
-            <div className='mt-16 md:ml-7 '>
+            <div className='mt-14 md:ml-7 '>
                 <p className='text-slate-500 text-2xl font-medium lg:text-3xl'>Design Your Working <span className=" text-cyan-500  rounded font-semibold">Schedule</span> with us :
                 </p>
                 <div className='flex gap-2'>
                     <div className='mt-2'>
                         <Link href='/Signup'>
-                            <button className='text-white bg-cyan-500 py-3 px-2 rounded-md  '>Create Your Account</button>
+                            <button className='text-white bg-cyan-500 py-3 px-2 rounded-md md:text-md active:bg-cyan-700  '>Create Your Account</button>
                         </Link>
 
                     </div>
                     <div className='mt-2'>
                         <Link href='/Login'>
-                            <button className='text-white bg-cyan-500 py-3 px-7 rounded-md   '>Login</button>
+                            <button className='text-white bg-cyan-500 py-3 px-7 rounded-md md:text-md active:bg-cyan-700   '>Login</button>
                         </Link>
 
                     </div>

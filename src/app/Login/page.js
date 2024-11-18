@@ -76,7 +76,7 @@ const Page = () => {
     
     return (
         <>
-            <div className="w-full h-screen mt-0 mr-0 mb-10 ml-0 pt-20 pr-0">
+            <div className="w-full h-full mt-5 mr-0 mb-10 ml-0 pt-20 pr-0 md:m-0">
                 <div className=" h-auto md:border-2 md:w-80 md:h-72 md:m-auto md:py-8 lg:items-end">
                     <div className=" w-full h-14 flex justify-center  ">
                         <Image src={profile} alt="logo" className="w-14" />
